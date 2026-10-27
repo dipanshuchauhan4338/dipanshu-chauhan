@@ -1,6 +1,13 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First CSS</title><style>
+    * {
+        box-sizing: border-box;
+    }
+
     h1 {
         color: blue;
         text-align: center;
@@ -14,11 +21,26 @@
     body {
         background-color: lightyellow;
     }
+
+    .card {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 16px;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    #hero {
+        padding: 16px;
+        background-color: lightblue;
+    }
 </style>
 
 </head>
-<body><h1>Welcome to My Website</h1>
-<p>This is my first CSS program.</p>
+<body>
+    <h1 id="hero">Welcome to My Website</h1>
+    <p class="card">This is my first CSS program.</p>
+
 
 </body>
 </html>
