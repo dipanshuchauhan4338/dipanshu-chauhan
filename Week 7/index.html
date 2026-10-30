@@ -57,6 +57,29 @@
             font-weight: bold;
         }
 
+        .banner {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #dfe9ff, #eef4ff);
+            padding: 24px;
+        }
+
+        .banner h1 {
+            margin: 0 0 12px;
+            font-size: 3rem;
+            color: #17233c;
+        }
+
+        .banner p {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #3d4d69;
+        }
+
         @media (max-width: 600px) {
             .navbar {
                 align-items: flex-start;
@@ -86,5 +109,10 @@
             <a class="nav-button" href="#login">Login</a>
         </div>
     </nav>
+
+    <section class="banner">
+        <h1>Welcome to My Website</h1>
+        <p>Creative design starts with clean structure and smart layout.</p>
+    </section>
 </body>
 </html>
