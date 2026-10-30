@@ -13,7 +13,7 @@
             background: #f5f7fc;
             font-synthesis: none;
             text-rendering: optimizeLegibility;
-            --ink: #17233c;
+             
             --muted: #64708a;
             --line: #e2e7f0;
             --blue: #4263eb;
@@ -307,12 +307,103 @@
             color: var(--ink);
         }
 
+        .profiles {
+            margin-top: 20px;
+            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            background: #fff;
+            box-shadow: 0 12px 36px rgb(34 51 84 / 6%);
+        }
+
+        .profiles-heading {
+            margin-bottom: 22px;
+        }
+
+        .profiles-heading h2 {
+            margin-bottom: 4px;
+        }
+
+        .profiles-heading p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .profile-card {
+            --card-accent: #4263eb;
+            --card-soft: #eef2ff;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 22px;
+            border: 2px solid var(--card-accent);
+            border-radius: 18px;
+            background: var(--card-soft);
+        }
+
+        .profile-card.coral {
+            --card-accent: #ea5a47;
+            --card-soft: #fff0ed;
+        }
+
+        .avatar {
+            width: 82px;
+            height: 82px;
+            flex: 0 0 auto;
+            overflow: hidden;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            background: #dbe4f4;
+            box-shadow: 0 3px 12px rgb(23 35 60 / 18%);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-copy h3 {
+            margin: 0 0 5px;
+            color: var(--ink);
+            font-size: 1.15rem;
+        }
+
+        .profile-copy p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .profile-role {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: var(--card-accent);
+            color: #fff;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
         @media (max-width: 760px) {
             body {
                 padding: 32px 16px 48px;
             }
 
             .workspace {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -423,6 +514,36 @@
                 <p>Live CSS · <code>box-sizing: border-box</code></p>
             </div>
             <code id="css-example">width: 320px; · padding: 24px; · border: 8px; · margin: 20px;</code>
+        </section>
+
+        <section class="profiles" aria-labelledby="profile-title">
+            <div class="profiles-heading">
+                <h2 id="profile-title">Profile cards</h2>
+                <p>Two color versions using the same bordered card layout.</p>
+            </div>
+            <div class="profile-grid">
+                <article class="profile-card">
+                    <div class="avatar" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="">
+                    </div>
+                    <div class="profile-copy">
+                        <h3>Olivia Martin</h3>
+                        <p>Creating thoughtful digital experiences for people and teams.</p>
+                        <span class="profile-role">Product Designer</span>
+                    </div>
+                </article>
+
+                <article class="profile-card coral">
+                    <div class="avatar" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=200&amp;q=80" alt="">
+                    </div>
+                    <div class="profile-copy">
+                        <h3>Daniel Wilson</h3>
+                        <p>Building useful products with clean code and simple ideas.</p>
+                        <span class="profile-role">Front-end Developer</span>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
