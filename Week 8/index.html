@@ -21,18 +21,25 @@
     .foot { grid-area: foot; }
 
     .grid-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       padding: 20px;
-      text-align: center;
+      text-align: left;
       background: lightblue;
+    }
+
+    .icon {
+      font-size: 24px;
     }
   </style>
 </head>
 <body>
   <div class="grid">
-    <header class="grid-item head">Head</header>
-    <aside class="grid-item side">Side</aside>
-    <main class="grid-item main">Main</main>
-    <footer class="grid-item foot">Foot</footer>
+    <header class="grid-item head"><span class="icon">🏠</span><span>Head</span></header>
+    <aside class="grid-item side"><span class="icon">📋</span><span>Side</span></aside>
+    <main class="grid-item main"><span class="icon">📰</span><span>Main</span></main>
+    <footer class="grid-item foot"><span class="icon">📞</span><span>Foot</span></footer>
   </div>
 </body>
 </html>
