@@ -6,6 +6,7 @@
   <title>Responsive Grid</title>
   <style>
     body {
+      margin: 0;
       font-size: 1rem;
     }
 
@@ -39,6 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 16px;
       padding: 12px;
     }
@@ -65,7 +67,13 @@
     @media (min-width: 1024px) {
       .grid {
         grid-template-columns: 1fr 3fr;
+        max-width: 1200px;
+        margin-inline: auto;
         gap: 24px;
+      }
+
+      body {
+        padding-inline: 24px;
       }
     }
   </style>
@@ -82,9 +90,9 @@
         </div>
       </nav>
     </header>
-    <aside class="grid-item side"><span>??</span><span>Side</span></aside>
+    <aside class="grid-item side"><span>Side content</span></aside>
     <main class="grid-item main" id="main"><span>Main content</span></main>
     <footer class="grid-item foot" id="footer"><span>Foot</span></footer>
-  </div
+  </div>
 </body>
 </html>
